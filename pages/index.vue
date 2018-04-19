@@ -1,13 +1,26 @@
 <template>
-  <div>
-    <p>Hello World</p>
+  <div style="height:100%">
+    <my-header></my-header>
+    <p>我的主题内容部分</p>
   </div>
 </template>
 
 <script>
-import axios from '~/plugins/axios'
+import myHeader from '../components/myHeader'
 
 export default {
+  head:{
+    title:'简书-创作你的创作',
+    meta:[
+      { charset: "utf-8" },
+      { name: "keywords", content: "简书首页" },
+      { name: "description", content: "简书首页" },
+      { name: "author", content: "王雪金" }
+    ]
+  },
+  components:{
+    myHeader
+  },
   data () {
     return{
       name:'首页'

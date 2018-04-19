@@ -5,13 +5,6 @@
 </template>
 
 <script>
-import Vue from "vue";
-import BootstrapVue from "bootstrap-vue";
-Vue.use(BootstrapVue);
-// 首先引入bootstrap.css,加载bootstrap样式
-import "bootstrap/dist/css/bootstrap.css";
-// 引入bootstrap-vue.css文件
-import "bootstrap-vue/dist/bootstrap-vue.css";
 export default {};
 </script>
 
@@ -31,7 +24,7 @@ export default {};
 }
 .sign .logo {
   position: absolute;
-  left: 50px;
+  margin-left: 50px;
   top: 50px;
 }
 .sign img {
@@ -48,7 +41,7 @@ export default {};
   vertical-align: middle;
 }
 .sign .main .title {
-  margin: 0 auto 30px;
+  margin: 0 auto 50px;
   color: #939393;
   font-size: 18px;
 }
@@ -108,12 +101,12 @@ export default {};
   float: left;
   margin: 15px 0;
 }
-.sign .main form .help {
+.sign .main form .help a {
   float: right;
   margin: 15px 0;
   color: #969696;
 }
-.sign .main form .help:hover {
+.sign .main form .help a:hover {
   color: #333;
 }
 .sign .main form button {
@@ -214,7 +207,7 @@ export default {};
 .sign .main .more-sign ul li a i.weixin{
   color: #00bb29;
 }
-.sign .main .more-sign ul li a i.weiqq{
+.sign .main .more-sign ul li a i.qq{
   color: #498ad5;
 }
 
