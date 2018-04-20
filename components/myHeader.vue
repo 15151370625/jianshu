@@ -52,7 +52,56 @@
                     </ul>
                 </div>
                 <!-- 右上角，登录和注册 -->
-            </div>
+                <!-- 导航部分 -->
+                <div class="container">
+                    <ul class="nav-list">
+                        <li>
+                            <nuxt-link to="/" class="active">
+                                <i class="fa fa-compass"></i>
+                                <span>发现</span>
+                            </nuxt-link>
+                        </li>
+                        <li>
+                            <nuxt-link to="/follow">
+                                <i class="fa fa-book"></i>
+                                <span>关注</span>
+                            </nuxt-link>
+                        </li>
+                        <li class="user">
+                            <nuxt-link to="/notify">
+                                <i class="fa fa-bell-o"></i>
+                                <span>消息</span>
+                            </nuxt-link>
+                            <ul class="drop-menu">
+                                <li>
+                                    <nuxt-link to="/">
+                                        <i class="fa fa-comment-o"></i>
+                                        评论
+                                    </nuxt-link>
+                                </li>
+                                <li>
+                                    <nuxt-link to="/">
+                                        <i class="fa fa-envelope-o"></i>
+                                        简信
+                                    </nuxt-link>
+                                </li>
+                                <li>
+                                    <nuxt-link to="/">
+                                        <i class="fa fa-heart-o"></i>
+                                        喜欢和赞
+                                    </nuxt-link>
+                                </li>
+                                <li>
+                                    <nuxt-link to="/">
+                                        <i class="fa fa-plus-square-o"></i>
+                                        关注
+                                    </nuxt-link>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div> 
         </nav>
     </div>
 </template>
@@ -166,5 +215,29 @@
         width: 20px;
         height: 20px;
         display: inline-block;
+    }
+    nav .nav-list{
+        float: left;
+        margin: 0;
+    }
+    nav .nav-list>li{
+        float: left;
+    }
+    nav .nav-list>li a{
+        display: block;
+        height: 56px;
+        line-height: 26px;
+        padding:15px;
+    }
+    nav .nav-list>li a.active{
+        color: #ea6f5a;
+        background: none!important;
+    }
+    nav .nav-list>li a:hover{
+        background: #f5f5f5;
+    }
+    nav .nav-list>li a i{
+        margin-right: 5px;
+        font-size: 20px;
     }
 </style>
