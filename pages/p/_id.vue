@@ -3,13 +3,14 @@
       <my-header></my-header>
       <div class="note">
           <div class="post">
+              <!-- 文章正文 -->
               <div class="article">
                   <h1 class="title">记观《解忧杂货铺》</h1>
                   <div class="author">
                         <div class="avatar">
                           <img src="~/assets/img/1.jpg" alt="">
                         </div>
-                          <div class="info">
+                        <div class="info">
                               <nuxt-link to="name" class="name">
                                   秘名
                               </nuxt-link>
@@ -34,11 +35,11 @@
                                       喜欢 4
                                   </span>
                               </div>
-                          </div>
-                          </div>
-                          <div class="show-content">
-                              <div class="show-content-free">
-                              <p>
+                        </div>
+                  </div>
+                  <div class="show-content">
+                      <div class="show-content-free">
+                          <p>
                                   很早就有《解忧杂货铺》这本书，翻看了几页，一直不能投入于是便放下。春节期间，与一位小学五年级的小帅哥聊天，说到他在看此书，我困惑的说看不下去，他给的建议是：阿姨，你可以先看电影，再看书，很好看。于是当天是晚上我便看完了找到并看完了该片。
 
                                 作者是日本人，日本和中国都有把他搬上宽荧幕。我看的是中国拍的。我这样一位四十岁的中年妇女当看到一开场是热巴和王俊凯这两个当红小明星，真想马上暂停。拿起手机问问小朋友：你不是因为王俊凯和热巴才喜欢《杂货铺》的吧？好了，演员养眼总是好的，继续看，嘿嘿！
@@ -58,20 +59,61 @@
                                     三个犯了错的年轻人在一个荒废了的小房子中度过了神奇的一天后，也找到了人生的方向，他们迎着朝霞走出“杂货铺”，用年轻的向上的心勇敢的面对他们今后的生活。
 
                                     在此谢谢小朋友的推荐！
-                              </p>
-                              </div>
-                          </div>
-                          <div class="show-foot">
-                              <nuxt-link to="/note/123" class="notebook">
-                                <i class="fa fa-book"></i>
-                                日记本
-                              </nuxt-link>
-                              <div class="copyright">© 著作权归作者所有</div>
-                          </div>
+                          </p>
                       </div>
                   </div>
               </div>
+              <div class="show-foot">
+                    <nuxt-link to="/note/123" class="notebook">
+                        <i class="fa fa-book"></i>
+                                日记本
+                    </nuxt-link>
+                    <div class="copyright">© 著作权归作者所有</div>
+              </div>
+            <!-- 文章底部的作者信息 -->
+              <div class="follow-detail">
+                  <div class="info">
+                      <div class="avatar">
+                        <img src="~/assets/img/1.jpg" alt="">
+                      </div>
+                      <a href="#" class="btn-follow">
+                        <i class="fa fa-plus"></i>
+                        <span>关注</span>
+                      </a>
+                      <nuxt-link to="/u/123" class="title">秘名</nuxt-link>
+                      <i class="fa fa-mars"></i>
+                      <p>
+                          写了 12886 字，被 22 人关注，获得了 102 个喜欢
+                      </p>
+                  </div>
+              </div>  
+              <div class="meta-bottom">
+                  <div class="like">
+                      <div class="like-btn">
+                          <a href="#" class="">喜欢</a>
+                      </div>
+                      <div class="like-num">
+                          <a href="#">50</a>
+                      </div>
+                  </div>
+                  <div class="share">
+                      <a href="#" class="share-btn">
+                          <i class="fa fa-weixin weixin"></i>
+                      </a>
+                      <a href="#" class="share-btn">
+                          <i class="fa fa-weibo weibo"></i>
+                      </a>
+                      <a href="#" class="share-btn">
+                          <i class="fa fa-qq qq"></i>
+                      </a>
+                      <a href="#" class="share-btn more-share">
+                          更多分享
+                      </a>
+                  </div>
+              </div>
           </div>
+      </div>
+  </div>
 </template>
 <script>
 import myHeader from "~/components/myHeader";
