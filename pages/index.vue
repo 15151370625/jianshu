@@ -51,7 +51,7 @@
                         </span>
                     </div>
                   </div>
-                  <nuxt-link to="/u/123" class="title">实现一个靠谱的Web认证</nuxt-link>
+                  <nuxt-link to="/p/123" class="title">实现一个靠谱的Web认证</nuxt-link>
                   <div class="abstruct">Web认证是任何一个认真一点的网站都必须实现的基本功能。这个功能解决了让服务器“认识你就是你“的问题。这个功能看起来貌似很简单，但是实际上处处是坑。因为认证是依靠一套技术整体...</div>
                   <div class="meta">
                     <nuxt-link to="/u/123" class="collection-tag">程序员</nuxt-link>
