@@ -36,7 +36,7 @@
               <div class="comment-wrap">
                   <p>支持一下，消灭零评论</p>
                   <div class="tool-group">
-                      <a href="#" class="like-btn">
+                      <a href="javascript:void(0)" class="like-btn" :class="{'iszan':iszan}" @click="iszan=!iszan">
                           <span>1人赞</span>
                       </a>
                       <a href="#" class="comment-btn">
@@ -220,7 +220,8 @@ export default {
           },
           user_id: 3160769
         }
-      ]
+      ],
+      iszan: false
     };
   }
 };
@@ -371,6 +372,12 @@ export default {
   color: #969696;
   position: relative;
 }
+.comment-list .comment .comment-wrap .like-btn:hover span{
+        color:#333!important;
+}
+.comment-list .comment .comment-wrap .like-btn:hover:before {
+  background-position-x: -50px;
+}
 .comment-list .comment .comment-wrap .like-btn::before {
   content: "";
   width: 50px;
@@ -382,6 +389,17 @@ export default {
   background-repeat: no-repeat;
   background-position: left;
   background-size: 1050px 50px;
+}
+.comment-list .comment .comment-wrap .iszan.like-btn::before {
+  animation: changeZan 0.6s steps(19) forwards;
+}
+@keyframes changeZan {
+  0% {
+    background-position-x: -50px;
+  }
+  100% {
+    background-position: right;
+  }
 }
 .comment-list .comment .comment-wrap .like-btn span {
   font-size: 14px;
@@ -395,51 +413,51 @@ export default {
   font-size: 18px;
   margin-right: 5px;
 }
-.comment-list .sub-comment-list{
-    margin: 20px 0 0 5px;
-    padding: 5px 0 5px 20px;
-    border-left: 2px solid #d9d9d9; 
+.comment-list .sub-comment-list {
+  margin: 20px 0 0 5px;
+  padding: 5px 0 5px 20px;
+  border-left: 2px solid #d9d9d9;
 }
-.comment-list .sub-comment-list .sub-comment{
-    padding-bottom: 15px;
-    margin-bottom: 15px;
-    border-bottom: 1px dashed #f0f0f0;
+.comment-list .sub-comment-list .sub-comment {
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  border-bottom: 1px dashed #f0f0f0;
 }
-.comment-list .sub-comment-list .sub-comment .sub-comment-content{
-    font-size: 14px;
-    line-height: 1.5;
-    margin-bottom: 5px;
+.comment-list .sub-comment-list .sub-comment .sub-comment-content {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 5px;
 }
-.comment-list .sub-comment-list .sub-comment a{
-    color: #3194d0;
+.comment-list .sub-comment-list .sub-comment a {
+  color: #3194d0;
 }
-.comment-list .sub-comment-list .sub-comment .sub-tool-group{
-    font-size: 12px;
-    color: #969696;
+.comment-list .sub-comment-list .sub-comment .sub-tool-group {
+  font-size: 12px;
+  color: #969696;
 }
-.comment-list .sub-comment-list .sub-comment .sub-tool-group a{
-    margin-left: 10px;
-    color: #969696;
+.comment-list .sub-comment-list .sub-comment .sub-tool-group a {
+  margin-left: 10px;
+  color: #969696;
 }
-.comment-list .sub-comment-list .sub-comment .sub-tool-group a i{
-    margin-right: 5px;
-    font-size: 14px;
+.comment-list .sub-comment-list .sub-comment .sub-tool-group a i {
+  margin-right: 5px;
+  font-size: 14px;
 }
-.comment-list .sub-comment-list .more-comment{
-    border: 0;
-    font-size: 14px;
-    color: #969696;
+.comment-list .sub-comment-list .more-comment {
+  border: 0;
+  font-size: 14px;
+  color: #969696;
 }
-.comment-list .sub-comment-list .more-comment a{
-    color: #969696;
+.comment-list .sub-comment-list .more-comment a {
+  color: #969696;
 }
-.comment-list .sub-comment-list .more-comment a:hover{
-    color: #333;
+.comment-list .sub-comment-list .more-comment a:hover {
+  color: #333;
 }
-.comment-list .sub-comment-list .more-comment a i{
-    margin-right: 5px;
+.comment-list .sub-comment-list .more-comment a i {
+  margin-right: 5px;
 }
-.comment-list .sub-comment-list form{
-    margin: 0;
+.comment-list .sub-comment-list form {
+  margin: 0;
 }
 </style>

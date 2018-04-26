@@ -88,12 +88,12 @@
                   </div>
               </div>  
               <div class="meta-bottom">
-                  <div class="like">
+                  <div class="like" :class="{'islike':islike}" @click="islike=!islike">
                       <div class="like-btn">
-                          <a href="#" class="">喜欢</a>
+                          <a>喜欢</a>
                       </div>
                       <div class="like-num">
-                          <a href="#">50</a>
+                          <a>50</a>
                       </div>
                   </div>
                   <div class="share">
@@ -132,6 +132,7 @@ export default {
   data() {
     return {
       name: "page",
+      islike: false
     };
   },
   components: {
@@ -140,3 +141,6 @@ export default {
   }
 };
 </script>
+<style>
+
+</style>
