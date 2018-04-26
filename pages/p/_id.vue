@@ -111,12 +111,15 @@
                       </a>
                   </div>
               </div>
+              <!-- 留言组件 -->
+              <my-comment></my-comment>
           </div>
       </div>
   </div>
 </template>
 <script>
 import myHeader from "~/components/myHeader";
+import myComment from "~/components/myComment";
 export default {
   head: {
     title: "简书文章详情页面-创作你的创作",
@@ -128,11 +131,12 @@ export default {
   },
   data() {
     return {
-      name: "page"
+      name: "page",
     };
   },
   components: {
-    myHeader
+    myHeader,
+    myComment
   }
 };
 </script>
